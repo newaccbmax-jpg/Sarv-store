@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>پوشاک سرو</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;700&display=swap">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.6 4.5 4.5 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 10h4.5l3.5 3.5V16h-8z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+
+    <symbol id="g-shirt" viewBox="0 0 64 64"><path d="M22 8L8 15l5 11 7-3v33h24V23l7 3 5-11-14-7c-2 4-6 6-10 6s-8-2-10-6z"/></symbol>
+    <symbol id="g-coat" viewBox="0 0 64 64"><path d="M23 6l-11 8 3 44h34l3-44-11-8-9 10z"/><path d="M32 16v42"/></symbol>
+    <symbol id="g-trousers" viewBox="0 0 64 64"><path d="M20 6h24l4 52H35l-3-30-3 30H16z"/><path d="M20 12h24"/></symbol>
+    <symbol id="g-jacket" viewBox="0 0 64 64"><path d="M20 8L8 16l3 10-1 32h44l-1-32 3-10-12-8c-2 4-6 6-12 6s-10-2-12-6z"/><path d="M12 30h40M12 42h40M32 14v44"/></symbol>
+    <symbol id="g-dress" viewBox="0 0 64 64"><path d="M25 6h14l1 14 10 38H14l10-38z"/><path d="M24 20h16"/></symbol>
+    <symbol id="g-scarf" viewBox="0 0 64 64"><path d="M12 10h40v14c-10 8-30 8-40 0z"/><path d="M20 26l-2 28h10l-1-26M42 26l2 28h10l-2-30"/></symbol>
+    <symbol id="g-bag" viewBox="0 0 64 64"><path d="M12 22h40l-3 34H15z"/><path d="M22 22v-4a10 10 0 0 1 20 0v4"/></symbol>
+  </defs>
+</svg>
+
+<div id="app" dir="rtl" lang="fa">
+
+<div class="announce">
+  <div class="wrap">
+    <span>ارسال رایگان برای سفارش بالای ۳٬۰۰۰٬۰۰۰ تومان</span>
+    <span>تخفیف فصلی تا پایان امشب: <b dir="ltr" id="cd" role="timer">۰۰:۰۰:۰۰</b></span>
+  </div>
+</div>
+
+<header class="head">
+  <div class="wrap bar">
+    <a class="brand" href="#top" data-act="top" aria-label="پوشاک سرو، بازگشت به بالای صفحه">
+      <svg viewBox="0 0 26 30" aria-hidden="true"><path d="M13 0c-5 6-9 12-9 19 0 4 3 7 9 7s9-3 9-7C22 12 18 6 13 0z"/><rect x="11.5" y="24" width="3" height="6"/></svg>
+      سرو
+    </a>
+    <nav class="nav" aria-label="دسته‌بندی‌ها">
+      <button type="button" data-act="nav" data-cat="زنانه">زنانه</button>
+      <button type="button" data-act="nav" data-cat="مردانه">مردانه</button>
+      <button type="button" data-act="nav" data-cat="بچگانه">بچگانه</button>
+      <button type="button" data-act="nav" data-cat="اکسسوری">اکسسوری</button>
+      <button type="button" data-act="nav" data-cat="تخفیف">تخفیف‌ها</button>
+    </nav>
+    <div class="tools">
+      <button type="button" class="ibtn" data-act="search" aria-label="جست‌وجو"><svg class="ic"><use href="#i-search"/></svg></button>
+      <button type="button" class="ibtn" data-act="wishlist" aria-label="علاقه‌مندی‌ها"><svg class="ic"><use href="#i-heart"/></svg><span class="badge" id="wBadge" hidden>۰</span></button>
+      <button type="button" class="ibtn" data-act="open-cart" aria-label="سبد خرید"><svg class="ic"><use href="#i-bag"/></svg><span class="badge" id="cBadge" hidden>۰</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>پاییز، با رنگ‌های آرام</h1>
+        <p>کلکسیون ۱۴۰۵ برای زنان، مردان و کودکان. پارچه‌های نخی و پشمی، برش‌های ساده و سایزبندی کامل.</p>
+        <div class="cta">
+          <button type="button" class="btn primary" data-act="nav" data-cat="همه">خرید کلکسیون</button>
+          <button type="button" class="btn ghost" data-act="nav" data-cat="تخفیف">مشاهده تخفیف‌ها</button>
+        </div>
+      </div>
+      <div class="collage">
+        <span class="slot main tone2" data-slot="hero-main" data-icon="coat" data-alt="مدل با پالتوی پشمی"></span>
+        <span class="slot tone1" data-slot="hero-a" data-icon="shirt" data-alt="پیراهن کتان"></span>
+        <span class="slot tone3" data-slot="hero-b" data-icon="bag" data-alt="کیف چرمی"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:8px">
+    <div class="wrap">
+      <div class="sec-h"><h2>از کجا شروع کنیم؟</h2><p>دسته‌ای را انتخاب کنید</p></div>
+      <div class="tiles" id="tiles"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="products">
+    <div class="wrap">
+      <div class="sec-h"><h2>محصولات</h2><p>نام، قیمت و مشخصات محصولات این صفحه نمونه است</p></div>
+      <div class="tool">
+        <div class="chips" id="chips" role="group" aria-label="فیلتر دسته‌بندی"></div>
+        <label class="field search"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><span class="sr">جست‌وجوی محصول</span><input id="q" type="search" placeholder="جست‌وجو در محصولات" autocomplete="off"></label>
+        <label class="field"><span class="sr">مرتب‌سازی</span><select id="sort"><option value="pop">پرفروش‌ترین</option><option value="low">ارزان‌ترین</option><option value="high">گران‌ترین</option></select></label>
+      </div>
+      <p class="sr" id="count" aria-live="polite"></p>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="perks">
+    <div class="wrap">
+      <div class="perk"><svg class="ic"><use href="#i-truck"/></svg><div><b>ارسال به سراسر کشور</b><span>بسته‌بندی محکم و کد رهگیری برای هر سفارش</span></div></div>
+      <div class="perk"><svg class="ic"><use href="#i-swap"/></svg><div><b>تعویض سایز</b><span>اگر اندازه نبود، با پشتیبانی هماهنگ کنید</span></div></div>
+      <div class="perk"><svg class="ic"><use href="#i-shield"/></svg><div><b>پرداخت امن</b><span>پرداخت آنلاین از درگاه بانکی</span></div></div>
+      <div class="perk"><svg class="ic"><use href="#i-chat"/></svg><div><b>پشتیبانی در پیام‌رسان</b><span>راهنمای انتخاب سایز و رنگ</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap about">
+      <span class="slot tone4" data-slot="about" data-icon="dress" data-alt="کارگاه دوخت"></span>
+      <div>
+        <h2>دوخت ساده، ماندگار</h2>
+        <p>سرو لباس روزمره می‌دوزد: رنگ‌های آرام، پارچه‌ی راحت و برش‌هایی که از مد نمی‌افتند. هر مدل در کارگاه [نام شهر] طراحی و دوخته می‌شود.</p>
+        <form class="news" id="news" novalidate>
+          <label class="field"><span class="sr">شماره موبایل</span><input id="phone" type="tel" inputmode="numeric" placeholder="شماره موبایل برای دریافت تخفیف" autocomplete="tel"></label>
+          <button type="submit" class="btn primary">عضویت</button>
+          <p class="msg" id="newsMsg" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <div class="brand-f">سرو</div>
+      <small>© ۱۴۰۵ پوشاک سرو، صفحه‌ی نمونه</small>
+    </div>
+    <ul>
+      <li>[آدرس فروشگاه]</li>
+      <li>[شماره تماس]</li>
+      <li>[آی‌دی اینستاگرام]</li>
+    </ul>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" data-act="close"></div>
+
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle" tabindex="-1">
+  <div class="d-head"><h2 id="dTitle">سبد خرید</h2><button type="button" class="ibtn" data-act="close" data-first aria-label="بستن سبد"><svg class="ic"><use href="#i-close"/></svg></button></div>
+  <div class="d-body" id="dBody"></div>
+  <div class="d-foot" id="dFoot"></div>
+</aside>
+
+<div class="modal" id="qv" role="dialog" aria-modal="true" aria-labelledby="qvT" tabindex="-1"></div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<input type="file" id="file" accept="image/*" hidden>
+<button type="button" class="editbtn" id="editBtn" aria-pressed="false" data-act="edit"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg><span>جایگذاری عکس‌ها</span></button>
+
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>پنل مدیریت | پوشاک سرو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#101514;--panel:#18201e;--panel2:#202a27;--line:#34423d;--text:#f3f4ef;--muted:#a8b3ac;--green:#a8c8ad;--gold:#d2b783;--red:#e49b91}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#213029 0,transparent 42%),var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.7}
+.wrap{width:min(1120px,calc(100% - 32px));margin:auto}.top{padding:28px 0 20px;border-bottom:1px solid var(--line)}.toprow{display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:24px;font-weight:800;color:var(--green)}.sub{color:var(--muted);font-size:13px}.panel{margin:24px 0;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 20px 70px #0003}h1,h2,h3,p{margin-top:0}h1{font-size:23px;margin-bottom:4px}h2{font-size:19px;margin-bottom:14px}h3{font-size:16px;margin-bottom:6px}.muted{color:var(--muted)}.login{display:grid;grid-template-columns:1fr auto;gap:10px;max-width:680px;margin-top:18px}input,select,textarea{width:100%;background:#101715;border:1px solid var(--line);border-radius:11px;padding:11px 13px;color:var(--text);font:inherit;min-width:0}textarea{min-height:90px;resize:vertical}label{display:grid;gap:6px;font-size:13px;color:var(--muted)}button{font:inherit;cursor:pointer;border:0;border-radius:11px;padding:10px 16px;background:var(--green);color:#142019;font-weight:700}button.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}button.danger{background:#4a2827;color:#ffd8d2;border:1px solid #78403a}button:disabled{opacity:.5;cursor:not-allowed}.msg{min-height:24px;color:var(--gold);font-size:13px;margin-top:9px}.msg.error{color:var(--red)}.tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}.tabs button{background:var(--panel2);color:var(--muted);border:1px solid var(--line)}.tabs button.active{background:var(--green);color:#142019;border-color:var(--green)}.tab{display:none}.tab.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.order,.product{border:1px solid var(--line);background:#151d1a;border-radius:15px;padding:16px;min-width:0}.orderhead,.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.orderhead{padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:10px}.num{color:var(--gold);font-weight:800;direction:ltr}.details{font-size:13px;color:var(--muted);overflow-wrap:anywhere}.items{margin:10px 0;padding:10px 14px;background:#202a27;border-radius:10px;font-size:13px}.statusrow{display:flex;gap:8px;margin-top:12px}.statusrow select{flex:1}.products{display:grid;gap:10px}.productrow{display:grid;grid-template-columns:1fr 150px auto;gap:10px;align-items:center}.productname{font-weight:700}.productmeta{font-size:12px;color:var(--muted)}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.formgrid .full{grid-column:1/-1}.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.empty{color:var(--muted);padding:22px;text-align:center;border:1px dashed var(--line);border-radius:14px}.hidden{display:none!important}.small{font-size:12px;color:var(--muted)}@media(max-width:720px){.grid{grid-template-columns:1fr}.productrow{grid-template-columns:1fr 110px}.productrow button{grid-column:1/-1}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}.login{grid-template-columns:1fr}.panel{padding:16px}.toprow{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap toprow"><div><div class="brand">سرو / پنل مدیریت</div><div class="sub">مدیریت سفارش‌ها و محصولات فروشگاه</div></div><a href="/" style="color:var(--gold);text-decoration:none">مشاهده فروشگاه ↗</a></div></header>
+<main class="wrap">
+<section class="panel" id="loginPanel">
+  <h1>ورود مدیر</h1><p class="muted">کلید مدیریتی را که در فایل .env تنظیم کرده‌ای وارد کن.</p>
+  <form class="login" id="loginForm"><input id="adminKey" type="password" autocomplete="current-password" placeholder="کلید مدیریت" required><button>ورود به پنل</button></form>
+  <div class="msg" id="loginMsg" role="status"></div>
+</section>
+<section class="panel hidden" id="dashboard">
+  <div class="sectionhead"><div><h1>داشبورد فروشگاه</h1><div class="sub">تغییرات در پایگاه‌داده محلی ذخیره می‌شوند.</div></div><button class="secondary" id="refreshBtn">بروزرسانی</button></div>
+  <div class="tabs"><button class="active" data-tab="orders">سفارش‌ها</button><button data-tab="products">محصولات</button><button data-tab="add">افزودن محصول</button></div>
+  <section class="tab active" id="tab-orders"><div class="sectionhead"><h2>سفارش‌های ثبت‌شده</h2><span class="small" id="orderCount"></span></div><div class="grid" id="ordersList"></div></section>
+  <section class="tab" id="tab-products"><div class="sectionhead"><h2>فهرست محصولات</h2><span class="small" id="productCount"></span></div><div class="products" id="productsList"></div></section>
+  <section class="tab" id="tab-add"><h2>افزودن محصول جدید</h2>
+    <form id="productForm" class="formgrid">
+      <label>نام محصول<input name="name" required maxlength="100"></label>
+      <label>دسته‌بندی<select name="cat"><option>زنانه</option><option>مردانه</option><option>بچگانه</option><option>اکسسوری</option></select></label>
+      <label>قیمت به تومان<input name="price" type="number" min="0" step="1000" required></label>
+      <label>قیمت قبلی (اختیاری)<input name="old" type="number" min="0" step="1000"></label>
+      <label>برچسب (جدید / تخفیف)<input name="tag" placeholder="جدید"></label>
+      <label>آیکون محصول<input name="icon" value="shirt" placeholder="shirt"></label>
+      <label>شماره رنگ زمینه (۱ تا ۴)<input name="tone" type="number" min="1" max="4" value="1"></label>
+      <label>سایزها با ویرگول<input name="sizes" value="S,M,L,XL" required></label>
+      <label class="full">رنگ‌ها با قالب «نام:#کد‌رنگ» و جداشده با ویرگول<input name="colors" value="مشکی:#1B1F22, سفید:#F4F2EC" required></label>
+      <label class="full">توضیحات<textarea name="desc"></textarea></label>
+      <div class="full"><button type="submit">ذخیره محصول</button></div>
+    </form>
+    <div class="msg" id="productMsg" role="status"></div>
+  </section>
+</section>
+</main>
+<script src="admin.js" defer></script>
+</body>
+</html>
